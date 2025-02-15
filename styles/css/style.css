@@ -1,0 +1,93 @@
+h1 {
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 500;
+  font-size: 4.25rem;
+  line-height: 1.3235294118;
+}
+
+h2 {
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 1.6071428571;
+}
+
+h3 {
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 3.2142857143;
+}
+
+.main-text,
+p {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 4.5;
+}
+
+.menu-btn {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 5;
+}
+
+.info {
+  font-family: "Montserrat", serif;
+  font-size: 400;
+  font-size: 1rem;
+  line-height: 5.625;
+}
+
+@media (max-width: Table) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.6071428571;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.25;
+  }
+  h3 {
+    font-family: "Montserrat", serif;
+    font-size: 1.5rem;
+    line-height: 3.75;
+  }
+  .main-text,
+  p {
+    font-size: 0.875rem;
+    line-height: 6.4285714286;
+  }
+  .menu-btn {
+    font-size: 1rem;
+    line-height: 5.625;
+  }
+}
+@media (max-width: Mobile) {
+  h1 {
+    font-size: 2.375rem;
+    line-height: 2.3684210526;
+  }
+  h2 {
+    font-size: 1.875rem;
+    line-height: 3;
+  }
+  .main-text,
+  p {
+    font-size: 1rem;
+    line-height: 5.625;
+  }
+  .menu-btn {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 6.4285714286;
+  }
+  .info {
+    font-size: 0.75rem;
+    line-height: 7.5;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

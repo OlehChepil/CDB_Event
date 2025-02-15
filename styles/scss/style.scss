@@ -1,0 +1,74 @@
+@use "templates/_abstracts" as *;
+
+h1 {
+    @extend %header1;
+}
+
+h2 {
+    @extend %header2;
+}
+
+h3 {
+    @extend %header3;
+}
+
+.main-text,
+p {
+    @extend %main_text;
+}
+
+.menu-btn {
+    @extend %btn;
+}
+
+.info {
+    @extend %info;
+}
+
+@media (max-width: "Table") {
+    h1 {
+        @include RelativeSize(56, 64);
+    }
+
+    h2 {
+        @include RelativeSize(40, 48);
+    }
+
+    h3 {
+        font-family: $Mont;
+        @include RelativeSize(24, 32);
+    }
+
+    .main-text,
+    p {
+        @include RelativeSize(14, 18);
+    }
+
+    .menu-btn {
+        @include RelativeSize(16, 18);
+    }
+}
+
+@media (max-width: "Mobile") {
+    h1 {
+        @include RelativeSize(38, 48);
+    }
+
+    h2 {
+        @include RelativeSize(30, 40);
+    }
+
+    .main-text,
+    p {
+        @include RelativeSize(16, 24);
+    }
+
+    .menu-btn {
+        font-weight: $font-weight_regular;
+        @include RelativeSize(14, 18);
+    }
+
+    .info {
+        @include RelativeSize(12, 18);
+    }
+}

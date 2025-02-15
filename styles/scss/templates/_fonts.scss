@@ -1,0 +1,43 @@
+@use "sass:math";
+@use "variables" as *;
+
+@mixin RelativeSize($size, $line) {
+    font-size: math.div($size, 16) * 1rem;
+    line-height: math.div(90, $size);
+}
+
+%header1 {
+    font-family: $MonAlt;
+    font-weight: $font-weight_medium;
+    @include RelativeSize(68, 90);
+}
+
+%header2 {
+    font-family: $MonAlt;
+    font-weight: $font-weight_medium;
+    @include RelativeSize(56, 64);
+}
+
+%header3 {
+    font-family: $MonAlt;
+    font-weight: $font-weight_medium;
+    @include RelativeSize(28, 36);
+}
+
+%main_text {
+    font-family: $Mont;
+    font-weight: $font-weight_regular;
+    @include RelativeSize(20, 32);
+}
+
+%btn {
+    font-family: $Mont;
+    font-weight: $font-weight_bolt;
+    @include RelativeSize(18, 22);
+}
+
+%info {
+    font-family: $Mont;
+    font-size: $font-weight_regular;
+    @include RelativeSize(16, 18);
+}
