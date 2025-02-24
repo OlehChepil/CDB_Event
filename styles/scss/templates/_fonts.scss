@@ -3,41 +3,86 @@
 
 @mixin RelativeSize($size, $line) {
     font-size: math.div($size, 16) * 1rem;
-    line-height: math.div(90, $size);
+    line-height: math.div($line, $size);
 }
 
 %header1 {
     font-family: $MonAlt;
-    font-weight: $font-weight_medium;
+    font-weight: $font_weight_medium;
     @include RelativeSize(68, 90);
 }
 
 %header2 {
     font-family: $MonAlt;
-    font-weight: $font-weight_medium;
+    font-weight: $font_weight_medium;
     @include RelativeSize(56, 64);
 }
 
 %header3 {
     font-family: $MonAlt;
-    font-weight: $font-weight_medium;
+    font-weight: $font_weight_medium;
     @include RelativeSize(28, 36);
 }
 
 %main_text {
     font-family: $Mont;
-    font-weight: $font-weight_regular;
+    font-weight: $font_weight_regular;
     @include RelativeSize(20, 32);
 }
 
 %btn {
     font-family: $Mont;
-    font-weight: $font-weight_bolt;
+    font-weight: $font_weight_bolt;
     @include RelativeSize(18, 22);
 }
 
 %info {
     font-family: $Mont;
-    font-size: $font-weight_regular;
+    font-weight: $font_weight_regular;
     @include RelativeSize(16, 18);
+}
+
+@media (max-width: $screen_Tablet) {
+    %header1 {
+        @include RelativeSize(56, 64);
+    }
+
+    %header2 {
+        @include RelativeSize(40, 48);
+    }
+
+    %header3 {
+        font-family: $Mont;
+        @include RelativeSize(24, 32);
+    }
+
+    %main_text {
+        @include RelativeSize(14, 18);
+    }
+
+    %btn {
+        @include RelativeSize(16, 18);
+    }
+}
+
+@media (max-width: $screen_Mobil) {
+    %header1 {
+        @include RelativeSize(38, 48);
+    }
+
+    %header2 {
+        @include RelativeSize(30, 40);
+    }
+
+    %main_text {
+        @include RelativeSize(16, 24);
+    }
+
+    %btn {
+        @include RelativeSize(14, 18);
+    }
+
+    %info {
+        @include RelativeSize(12, 18);
+    }
 }

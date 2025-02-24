@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   font-family: "Montserrat Alternates", serif;
   font-weight: 500;
@@ -9,84 +10,291 @@ h2 {
   font-family: "Montserrat Alternates", serif;
   font-weight: 500;
   font-size: 3.5rem;
-  line-height: 1.6071428571;
+  line-height: 1.1428571429;
 }
 
 h3 {
   font-family: "Montserrat Alternates", serif;
   font-weight: 500;
   font-size: 1.75rem;
-  line-height: 3.2142857143;
+  line-height: 1.2857142857;
 }
 
-.main-text,
 p {
   font-family: "Montserrat", serif;
   font-weight: 400;
   font-size: 1.25rem;
-  line-height: 4.5;
+  line-height: 1.6;
 }
 
-.menu-btn {
+.user-account a, .search .search__inp, .header__user-account span, .header__nav-list .header__nav-item {
   font-family: "Montserrat", serif;
   font-weight: 700;
   font-size: 1.125rem;
-  line-height: 5;
+  line-height: 1.2222222222;
 }
 
-.info {
+.header__text {
   font-family: "Montserrat", serif;
-  font-size: 400;
+  font-weight: 400;
   font-size: 1rem;
-  line-height: 5.625;
+  line-height: 1.125;
 }
 
-@media (max-width: Table) {
+@media (max-width: 48rem) {
   h1 {
     font-size: 3.5rem;
-    line-height: 1.6071428571;
+    line-height: 1.1428571429;
   }
   h2 {
     font-size: 2.5rem;
-    line-height: 2.25;
+    line-height: 1.2;
   }
   h3 {
     font-family: "Montserrat", serif;
     font-size: 1.5rem;
-    line-height: 3.75;
+    line-height: 1.3333333333;
   }
-  .main-text,
   p {
     font-size: 0.875rem;
-    line-height: 6.4285714286;
+    line-height: 1.2857142857;
   }
-  .menu-btn {
+  .user-account a, .search .search__inp, .header__user-account span, .header__nav-list .header__nav-item {
     font-size: 1rem;
-    line-height: 5.625;
+    line-height: 1.125;
   }
 }
-@media (max-width: Mobile) {
+@media (max-width: 23.5rem) {
   h1 {
     font-size: 2.375rem;
-    line-height: 2.3684210526;
+    line-height: 1.2631578947;
   }
   h2 {
     font-size: 1.875rem;
-    line-height: 3;
+    line-height: 1.3333333333;
   }
-  .main-text,
   p {
     font-size: 1rem;
-    line-height: 5.625;
+    line-height: 1.5;
   }
-  .menu-btn {
-    font-weight: 400;
+  .user-account a, .search .search__inp, .header__user-account span, .header__nav-list .header__nav-item {
     font-size: 0.875rem;
-    line-height: 6.4285714286;
+    line-height: 1.2857142857;
   }
-  .info {
+  .header__text {
     font-size: 0.75rem;
-    line-height: 7.5;
+    line-height: 1.5;
+  }
+}
+p {
+  color: #3d3c39;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.search {
+  outline: 1px solid #979797;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+.search .search__btn {
+  height: 24px;
+  width: 24px;
+}
+.search .search__btn:focus {
+  outline: none;
+}
+.search .search__img {
+  max-width: none;
+}
+.search .search__inp {
+  width: 100%;
+  color: #a76e00;
+}
+.search .search__inp::placeholder {
+  opacity: 1;
+  color: #979797;
+}
+.search .search__inp:focus {
+  outline: none;
+}
+
+.home-screen {
+  background-image: url("/CDB_Imgs/baс/main-header.jpg");
+  background-size: cover;
+  border-image: 1 fill linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+  height: 100vh;
+}
+
+.header {
+  color: #a76e00;
+  display: grid;
+  grid-template-areas: "logo top top" "logo navl search";
+  padding-top: 16px;
+}
+
+.header__logo {
+  width: 159px;
+  height: 96px;
+  grid-area: logo;
+  margin-right: 72px;
+}
+.header__logo .logo-wo {
+  display: block;
+  height: inherit;
+  width: inherit;
+  background-image: url("/CDB_Imgs/logotypes/logo-D.svg");
+}
+
+.header__top {
+  display: flex;
+  grid-area: top;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 0 19px 0;
+  border-bottom: 2px solid #979797;
+  margin-bottom: 17px;
+  padding-top: 7px;
+}
+
+.header__media {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+
+.media-list {
+  display: flex;
+  gap: 0.5rem;
+}
+.media-list .media-list__item {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header__text {
+  color: inherit;
+}
+
+.header__user-account {
+  padding-top: 20px;
+}
+.header__user-account .user-account__line2 {
+  display: none;
+}
+.header__burger-btn {
+  display: none;
+}
+
+.header__nav-section {
+  grid-area: navl;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 2.5rem;
+  margin-right: 32px;
+}
+.header__search {
+  grid-area: search;
+}
+
+@media (max-width: 48rem) {
+  .container {
+    max-width: 48rem;
+    padding: 0 32px;
+    margin: 0 auto;
+  }
+  .header {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "logo top navl" ". . search";
+    padding-top: 0px;
+    gap: 32px;
+    align-items: center;
+    background-image: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 64px, rgba(255, 255, 255, 0) 64px, rgba(255, 255, 255, 0) 100%);
+  }
+  .header__logo {
+    height: 64px;
+    width: 130px;
+    margin: 0;
+  }
+  .header__logo .logo-wo {
+    background-image: url("/CDB_Imgs/logotypes/logo-T.svg");
+  }
+  .header__top {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header__user-account {
+    padding: 0;
+  }
+  .header__media {
+    display: none;
+  }
+  .header__burger-btn {
+    margin-left: auto;
+    display: block;
+  }
+  .header__nav-list {
+    display: none;
+  }
+  .header__search {
+    width: 174px;
+    margin-left: auto;
+  }
+}
+@media (max-width: 23.5rem) {
+  .container {
+    max-width: 23.5rem;
+    padding: 0 16px;
+  }
+  .header {
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "logo top navl" "search search search";
+    gap: 64px 15px;
+    background-image: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60px, rgba(255, 255, 255, 0) 60px, rgba(255, 255, 255, 0) 100%);
+  }
+  .header__logo {
+    height: 40px;
+    width: 88px;
+    margin: 10px 0;
+  }
+  .header__logo .logo-wo {
+    background-image: url("/CDB_Imgs/logotypes/logo-M.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .header__burger-btn {
+    margin-left: 0;
+    height: 40px;
+    width: 40px;
+  }
+  .header__user-account .user-account__line2 {
+    display: inline;
+  }
+  .header__user-account .user-account__line1 {
+    display: none;
+  }
+  .header__search {
+    width: 100%;
+  }
+  .search {
+    background-color: #979797;
+    border-color: #fdfdfd;
+  }
+  .search .search__inp::placeholder {
+    opacity: 1;
+    color: #fdfdfd;
   }
 }
 
